@@ -1,0 +1,10 @@
+<app-admin-header></app-admin-header>   
+<div class="full">
+    <div class="feilds">
+        <div class="outer text-center">
+            <h3>Change status for Order Id:- {{id}}</h3>
+            <input type="text" [(ngModel)]="u.status" placeholder="status"><br>
+            <a  href="/admindashboard/placedorders" class="btn btn-primary" type="submit" (click)="Val(u)">Submit</a>       
+        </div>
+    </div>
+</div>

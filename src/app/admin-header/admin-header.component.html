@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light head">
+  <a class=" logo" href="#"><img src="../../assets/JeanStationLogo.png" alt="Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">        
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="service.AdminLogedIn()" href="/admindashboard" > <span>AdminDashboard </span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"  *ngIf="service.AdminLogedIn()" href="/admindashboard/addproduct" ><span>Add Product</span> </a>&nbsp;
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"  *ngIf="service.AdminLogedIn()" href="/admindashboard/placedorders"><span>Placed orders</span></a>&nbsp;
+        </li>        
+      </ul>
+      <p class="mr-auto"></p>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="service.AdminLogedIn()" href="/adminlogin"  routerLink="adminlogin" (click)="ALOGOUT()"><span>Logout</span></a>
+        </li>
+      </ul>
+    </div>
+    </nav>

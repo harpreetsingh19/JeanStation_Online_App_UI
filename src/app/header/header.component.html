@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light head">
+  <a class=" logo" href="#"><img src="../../assets/JeanStationLogo.png" alt="Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" id="home" *ngIf="service.IsLogedIn()" href="/dashboard" ><span>Home  </span> <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <p class="mr-auto"></p>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="service.IsLogedIn()" href="/order" ><span>Order</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="service.IsLogedIn()" href="/dashboard/cart"><span>Cart</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="service.IsLogedIn()" href="/search"><span>Search</span></a>
+        </li>
+        <li class="nav-item active">
+          <a id="login" class="nav-link" *ngIf="!service.IsLogedIn()" href="/login" ><span>Login</span></a>
+        </li>
+        <li class="nav-item">
+          <a id="register" class="nav-link" *ngIf="!service.IsLogedIn()" href="/register"><Span>Register</Span></a>
+        </li>
+
+        <li class="nav-item">
+          <a id="logout" class="nav-link" *ngIf="service.IsLogedIn()" href="/login" (click)="LogOut()"><span>logout</span></a>
+        </li>
+      </ul>
+    </div>
+    </nav>

@@ -1,0 +1,13 @@
+.footer {
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    width: 100%;
+}
+.foot{
+    margin-top: 4.5%;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}

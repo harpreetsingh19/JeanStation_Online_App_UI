@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="products" *ngFor="let order of Orders">
+  <div class="pad">
+    <div class="card oneproduct text-center">
+      <img src="{{order.image}}" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">{{order.productname}}</h5>
+          <p class="card-text">{{order.price}}</p>
+          <p class="text-text">{{order.description}}</p>
+          <p class="text-text">{{order.status}}</p>
+            <div class="text-center">
+              <a (click)="Delete(order.orderid)"    class="btn  alert-primary" aria-disabled="{{toggle}}">Cancel order</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

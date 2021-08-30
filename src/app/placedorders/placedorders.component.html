@@ -1,0 +1,38 @@
+<app-admin-header></app-admin-header>   
+
+<div class="potable">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th class="text-center pos" scope="col">Order_id</th>
+        <th class="text-center pos" scope="col">Product_id</th>
+        <th class="text-center pos" scope="col">User_id</th>
+        <th class="text-center pos" scope="col">Price</th>
+        <th class="text-center pos" scope="col">Product Name</th>
+        <th class="text-center pos" scope="col">Method of Payment</th>
+        <th class="text-center pos" scope="col">Status</th>
+      </tr>
+    </thead>
+  </table>
+    <div *ngFor="let order of orders">
+      <table class="table table-hover table-light">
+    <tbody>
+      <tr>
+        <td class="text-center pos" scope="col">{{order.orderid}}</td>
+        <td class="text-center pos" scope="col">{{order.productid}}</td>
+        <td class="text-center pos" scope="col">{{order.userid}}</td>
+        <td class="text-center pos" scope="col">{{order.price}}</td>
+        <td class="text-center pos" scope="col">{{order.productname}}</td>
+        <td class="text-center pos" scope="col">{{order.mop}}</td>
+        <td class="text-center pos" scope="col"><select class="input-res" [(ngModel)]="order.status" placeholder="{{order.status}}"><option>Placed</option>
+          <option>Packed</option>
+          <option>Shipped</option>
+          <option>Out For Delivery</option>
+          <option>Delivered</option></select><br>
+          <button class="btn btn-primary text-center" (click)="onClick(order)">Change</button></td>
+      </tr>
+    </tbody>
+    </table>
+  <br><br>
+</div>
+</div>

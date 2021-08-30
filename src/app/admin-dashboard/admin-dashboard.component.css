@@ -1,0 +1,17 @@
+.products{
+    display: inline-flex;
+}
+.oneproduct{
+    border: 1px solid grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(206, 201, 201, 0.19)
+}
+.pad{
+    padding: 10px;
+}
+img{
+    border: 1px solid rgba(143, 135, 135, 0.19);
+    width: 58%;
+    margin-left: 22%;
+}
+

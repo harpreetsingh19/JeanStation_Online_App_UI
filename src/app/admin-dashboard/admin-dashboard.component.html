@@ -1,0 +1,20 @@
+<app-admin-header></app-admin-header>
+
+<div class="container">
+  <h2 class="text-center">All Products</h2> 
+</div>
+
+<div class="products" *ngFor="let cart of carts" style="display: inline-flex;">
+  <div class="pad">
+    <div class="card oneproduct text-center">
+        <img src="{{cart.image}}" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h5 class="card-title">{{cart.productname}}</h5>
+        <p class="text-text">{{cart.description}}</p> 
+        <p class="text-center">Rs:- {{cart.price}}</p>
+        <a href="/adminEditdetails"  routerLink="adminEditdetails" class="btn  alert-success" (click)="Edit(cart)">Edit Details</a>&nbsp;
+        <a href="/admindashboard" (click)="Delete(cart.productid)" class="btn  alert-danger">Delete</a>
+      </div>
+  </div>
+  </div>
+</div>

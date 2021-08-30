@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="row">
+  <div class="col productdetails">
+    <div class="card oneproduct text-center">
+      <img src="{{carts.image}}" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h5 class="card-title">{{carts.productname}}</h5>
+          <p class="s">{{msg}}</p>
+          <p class="card-text">Rs:- {{carts.price}}</p>
+          <p class="text-text">{{carts.description}}</p> 
+        </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="outer text-center">
+      <div class="feilds">
+        <p>Product Id: {{carts.productid}} </p>
+        <input type="text" [(ngModel)]="customer.Buyername" placeholder="Name" ><br>
+        <input type="text" [(ngModel)]="customer.Phonenumber" placeholder="number"><br>
+        <input type="text" name="" id="" placeholder="Address 1"><br>
+        <input type="text" name="" id="" placeholder="Address 2"><br>
+        <p>Mode Of Payment:<select [(ngModel)]="customer.Mop" placeholder="Mode of payment">
+          <option>Credit/Debit card</option>
+          <option>Cash on Delivery</option>
+          <option>UPI</option>
+          <option>E-Wallet</option>
+          <option>Net Banking</option></select></p>
+        <a href="/dashboard" (click)="onSubmit(customer)" class="btn btn-success">Confirm Order</a>&nbsp;&nbsp;
+        <a href="/dashboard" class="btn btn-success">Back</a>&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+</div>
+  
+

@@ -1,0 +1,13 @@
+<app-admin-header></app-admin-header>
+
+<div class="feilds">
+        <div class="outer text-center">
+                <h5>Edit details for Product Id:- {{carts.productid}}</h5>
+                <input type="text" [(ngModel)]="u.productname" placeholder="Name"><br>
+                <input class="btn btn-warning" type="file" [(ngModel)]="u.image" placeholder="Image"><br>
+                <input type="text" [(ngModel)]="u.description" placeholder="Description"><br>
+                <input type="number" [(ngModel)]="u.price" placeholder="Price"><br>
+                <a class="btn btn-primary" type="submit" (click)="Val()">Submit</a>
+        </div>
+</div>
+       

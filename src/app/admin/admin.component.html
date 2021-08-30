@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<app-admin-header></app-admin-header>
+<body>
+    <div class="loginForm text-center">
+        <h1 class="display-5">Login</h1>
+        <input type="text" [(ngModel)]="u.userid" placeholder="User ID"><br>
+        <input type="password" [(ngModel)]="u.password" placeholder="Password"><br>
+        <button class="btn-primary" type="submit" (click)="Val()">Submit</button>
+        {{msg}}
+    </div>
+</body>
+</html>

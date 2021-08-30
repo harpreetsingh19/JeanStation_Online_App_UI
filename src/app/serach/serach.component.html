@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="p">
+  <div class="s">
+    <input  class="form-control mr-sm-2"  id="searchText-id" [(ngModel)]="searchText" placeholder="Search (Product Name)" aria-label="Search">
+  </div>
+  <div class="products" *ngFor="let cart of carts | search:searchText">
+    <div class="pad">
+      <div class="card oneproduct text-center">
+        <img src="{{cart.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">{{cart.productname}}</h5>
+            <p class="card-text">{{cart.price}}</p>
+            <p class="text-text">{{cart.description}}</p> 
+            <a href="/dashboard/payment" class="btn  alert-success">Buy Now</a>&nbsp;
+            <a (click)="AddToCart(cart)" href="/cart"  routerLink="cart" class="btn  alert-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

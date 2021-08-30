@@ -1,0 +1,14 @@
+<app-header></app-header>
+    
+<body>
+    <div class="loginForm text-center">
+        <h1>Registration</h1>
+        <input type="text" [(ngModel)]="user.userid" placeholder="Enter userId"><br>
+        <input type="password" [(ngModel)]="user.password" placeholder="Password"><br>
+        <input type="text" [(ngModel)]="user.email" placeholder="Email"><br>
+        <input type="text" [(ngModel)]="user.number" placeholder="Mobile Number"><br>
+        <button class="btn btn-success btn-outline-secondary btn-lg" type="submit" (click)="Reg()">Submit</button><br>
+        <span style="color: azure; text-transform: uppercase;">{{msg}}</span>
+    </div>
+</body>
+

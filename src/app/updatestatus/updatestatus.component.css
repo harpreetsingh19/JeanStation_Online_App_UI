@@ -1,0 +1,25 @@
+.full{
+    background-color: rgba(117, 173, 135, 0.5);
+    background-size: cover;
+}
+.outer{
+    background-color: rgb(192, 182, 182);
+    max-width: 50%;
+    margin: auto;
+    padding: 5% 2%;
+    border-radius: 5px;
+    box-shadow:  15px 10px 20px 15px rgba(0, 0, 0, 0.19);
+}
+input{
+    border: none;
+    padding: 2px;
+    margin: 3px;
+    width: 70%;
+}
+.feilds{
+padding-top: 7%;
+padding-bottom: 25%;
+}
+.btn{
+    margin-top: 5px;
+}

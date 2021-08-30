@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, by, element } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,16 +8,60 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Product Header', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('JeanStationOnline-Application app is running!');
+    expect(page.getTitleText()).toEqual('New Arrivals');
   });
 
-  afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
+  it('Should display LOGIN button', () => {
+    page.navigateTo();
+    expect(page.getLoginButton().getText()).toEqual('LOGIN');
   });
+
+  it('Should display register button', () => {
+    page.navigateTo();
+    expect(page.getRegisterButton().getText()).toEqual('REGISTER');
+  });
+//app-login h1      Login
+  it('Should roue to login page', () => {
+    page.navigateTo();
+    page.getLoginButton().click();
+    expect(page.getLoginHeader()).toEqual('Login');
+  });
+
+
+  ///////////////////
+
+  it('should check for empty userid',() => {
+    page.navigateTo();
+    page.getLoginButton().click();
+    element(by.css('input[type="text"]')).sendKeys();
+    element(by.css('input[type="password"]')).sendKeys(3748);
+    element(by.css('.btn')).click();
+    expect(element(by.css('h2')).getText()).toBe('Not Valid!!!')
+  });
+
+  // test to check name as input and number as null
+  it('should check Empty password',() => {
+    page.navigateTo();
+    page.getLoginButton().click();
+    element(by.css('input[type="text"]')).sendKeys("test");
+    element(by.css('input[type="password"]')).sendKeys();
+    element(by.css('.btn')).click();
+    expect(element(by.css('h2')).getText()).toBe('Not Valid!!!')
+  });
+
+
+  /////////////////////////
+
+
+
+
+  // afterEach(async () => {
+  //   // Assert that there are no errors emitted from the browser
+  //   const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+  //   expect(logs).not.toContain(jasmine.objectContaining({
+  //     level: logging.Level.SEVERE,
+  //   } as logging.Entry));
+  // });
 });

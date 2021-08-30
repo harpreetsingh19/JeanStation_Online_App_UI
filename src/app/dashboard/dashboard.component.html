@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<iframe width="100%" height="450px"
+src="https://www.youtube.com/embed/cmpN6VZOB9s?autoplay=1&mute=1">
+</iframe>
+
+<div class="jumbotron">
+<img src = "../../assets/image44.jpg" alt = "Picture for jumbotron" id = "photo">
+</div>
+
+<div class="p">
+  <h1 class="text-center display-3">Products</h1>
+    <div class="products" *ngFor="let cart of carts">
+      <div class="pad">
+        <div class="card oneproduct text-center">
+          <img src="{{cart.image}}" class="image card-img-top" alt="Image">
+          <div class="card-body">
+            <h5 class="card-title">{{cart.productname}}</h5>
+            <p class="card-text">{{cart.price}}</p>
+            <p class="text-text">{{cart.description}}</p> 
+            <a href="/payment" routerLink="payment"  class="btn  alert-success" (click)="BuyNow(cart)">Buy Now</a>&nbsp;
+            <a class="btn  alert-primary" (click)="AddToCart(cart)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
